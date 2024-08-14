@@ -35,6 +35,11 @@ nav{
     justify-content: space-between;
 }
 
+.bar{
+    display: none;
+}
+
+
 nav ul{
     display: flex;
     gap: 25px;
@@ -66,6 +71,7 @@ nav a{
     line-height: 55px;
     margin-bottom: 20px;
 }
+
 .banner div{
     width: 50%;
 }
@@ -161,4 +167,31 @@ footer p{
     letter-spacing: 1px;
     font-weight: 500;
     opacity: 0.8;
+}
+
+
+/* responsiveness */
+
+@media screen and (max-width:576px) {
+    .bar{
+        display: block;
+        color: #fff;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    .banner{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .banner div{
+        width: 100%;
+    }
+
+    .player_grid_section, .all_highlights{
+        grid-template-columns: repeat(1, 1fr);   
+    }
 }
